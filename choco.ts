@@ -23,7 +23,7 @@ namespace ChocoCar {
     const PRESCALE = 0xFE
 
     let initialized = false
-
+    let turn_off = false
     export enum enServo {
         //blockId=servo_s1 block="接口1"
         S1 = 1,
