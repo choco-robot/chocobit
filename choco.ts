@@ -1,5 +1,4 @@
-﻿//自定义扩展库模板
-//chocobit 2018/8/17
+﻿//chocobit 2018/10/30
 //% color="#f97c04" weight=25 icon="\uf1b9"
 namespace ChocoCar {
 
@@ -24,6 +23,7 @@ namespace ChocoCar {
 
     let initialized = false
     let turn_off = false
+    
     export enum enServo {
         //blockId=servo_s1 block="接口1"
         S1 = 1,
