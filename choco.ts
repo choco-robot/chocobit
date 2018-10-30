@@ -348,7 +348,6 @@ namespace ChocoCar {
     //% v.min=1 v.max=5 
     //% brightness.min=1 brightness.max=5
     export function rainbowlight(v: number, brightness: number) {
-        let head: neopixel.Strip = null
         let RGB: neopixel.Strip = null
         turn_off = false
         RGB = neopixel.create(DigitalPin.P5, 12, NeoPixelMode.RGB)
@@ -356,14 +355,9 @@ namespace ChocoCar {
         RGB.showRainbow(1, 360)
         control.inBackground(() => {
             while (!turn_off) {
-                RGB.showRainbow(1, 360)
-                for (let index = 0; index <= 11; index++) {
-                    RGB.shift(1)
-                    RGB.show()
-                    head = RGB.range(0, index + 1)
-                    head.showRainbow(360 - 30 * index, 330)
-                    basic.pause(500 / v)
-                }
+                RGB.rotate(1)
+                RGB.show()
+                basic.pause(500 / v)
             }
             RGB.clear();
             RGB.show();
