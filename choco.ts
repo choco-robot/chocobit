@@ -1,4 +1,5 @@
-﻿//chocobit 2018/10/30
+﻿//chocobit 2018/11/1
+/** v1.1.1 */
 //% color="#f97c04" weight=25 icon="\uf1b9"
 namespace ChocoCar {
 
@@ -273,13 +274,13 @@ namespace ChocoCar {
 
 
     export enum IR_sensor{
-        //% blockId=IR_Left2 block="左2"
+        //% blockId=IR_Left2 block="左后"
         Left2 = 0,
-        //% blockId=IR_Left1 block="左1"
+        //% blockId=IR_Left1 block="左前"
         Left1,
-        //% blockId=IR_Right1 block="右1"
+        //% blockId=IR_Right1 block="右前"
         Right1,
-        //% blockId=IR_Right2 block="右2"
+        //% blockId=IR_Right2 block="右后"
         Right2
 
     }
@@ -309,8 +310,8 @@ namespace ChocoCar {
     export function read_IRsensor(n: IR_sensor,state:IR_state): boolean{
         let pin = 0;
         switch (n) {
-            case IR_sensor.Left1: pin = DigitalPin.P2; break;
-            case IR_sensor.Left2: pin = DigitalPin.P12; break;
+            case IR_sensor.Left1: pin = DigitalPin.P12; break;
+            case IR_sensor.Left2: pin = DigitalPin.P2; break;
             case IR_sensor.Right1: pin = DigitalPin.P8; break;
             case IR_sensor.Right2: pin = DigitalPin.P1; break;
         }
