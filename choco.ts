@@ -1,5 +1,5 @@
 ﻿//chocobit 2018/11/1
-/** v1.1.1 */
+/** v1.1.2 */
 //% color="#f97c04" weight=25 icon="\uf1b9"
 namespace ChocoCar {
 
