@@ -375,6 +375,25 @@ namespace ChocoCar {
     export function turnoff_rainbowlight() {
         turn_off = true
     }
+    export enum key{
+        A = 1,
+        B
+    }
+    /**
+     * 按键继续
+     */
+    //% blockId=press_to_continue block="按 %button 键继续" weight=7
+    //% color="#10c810"
+    export function press_to_continue(button: key) {
+        if(button == 1)    
+            while (!(input.buttonIsPressed(Button.A))) {
+        
+            }
+        else
+            while (!(input.buttonIsPressed(Button.B))) {
+
+            }
+    }
 }
 
 
